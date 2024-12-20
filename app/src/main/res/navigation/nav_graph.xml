@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcome_screen">
+
+    <fragment
+        android:id="@+id/welcome_screen"
+        android:name="com.example.pharmalink.Welcome_screen"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen">
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popExitAnim="@anim/slide_out"/>
+        <action
+            android:id="@+id/action_welcome_to_register"
+            app:destination="@id/registre"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.pharmalink.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registre"
+        android:name="com.example.pharmalink.registre"
+        android:label="fragment_registre"
+        tools:layout="@layout/fragment_registre" />
+</navigation>
