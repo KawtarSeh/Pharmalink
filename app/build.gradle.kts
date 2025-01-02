@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-parcelize")
+    kotlin("kapt")
 }
 
 android {
@@ -42,6 +43,15 @@ android {
 }
 
 dependencies {
+
+    //Room Database
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    // Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
+    // Coroutine support
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
     val nav_version = "2.8.3"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
