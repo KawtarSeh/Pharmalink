@@ -1,9 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.PharmaLink" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Customize your light theme here -->
+        <item name="android:textColorPrimary">@color/dark_grey</item>
+        <item name="android:textColor">@color/dark_grey</item>
     </style>
 
-    <style name="Theme.PharmaLink" parent="Base.Theme.PharmaLink" />
+    <style name="Theme.PharmaLink" parent="Base.Theme.PharmaLink">
+        <item name="android:textColorPrimary">@color/dark_grey</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
 </resources>

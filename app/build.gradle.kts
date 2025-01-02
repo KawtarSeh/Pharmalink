@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-parcelize")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -43,6 +44,7 @@ android {
 
 dependencies {
 
+    implementation(libs.firebase.database)
     val nav_version = "2.8.3"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation(libs.androidx.core.ktx)
@@ -53,4 +55,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+
 }

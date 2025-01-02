@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "406117292410",
+    "project_id": "pharmalink-c1a4e",
+    "storage_bucket": "pharmalink-c1a4e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406117292410:android:59c82a9050a5c152fa9ec3",
+        "android_client_info": {
+          "package_name": "com.example.pharmalink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb-j7vLfJJMhudobBI-EyfTAkfJ89rnhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
