@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/welcome_screen"
-        android:name="com.example.pharmalink.Welcome_screen"
+        android:name="com.example.pharmalink.fragments.Welcome_screen"
         android:label="fragment_welcome_screen"
         tools:layout="@layout/fragment_welcome_screen">
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
     android:id="@+id/registre"
-    android:name="com.example.pharmalink.registre"
+    android:name="com.example.pharmalink.fragments.registre"
     android:label="fragment_registre"
     tools:layout="@layout/fragment_registre" >
         <action
@@ -35,22 +35,102 @@
     </fragment>
     <fragment
         android:id="@+id/login"
-        android:name="com.example.pharmalink.login"
+        android:name="com.example.pharmalink.fragments.login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login"
         >
         <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/home"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out" />
+        <action
             android:id="@+id/action_login_to_profile"
             app:destination="@id/profile" />
     </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.pharmalink.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_vitaminListFragment"
+            app:destination="@id/vitaminListFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
+        <action
+            android:id="@+id/action_home_to_medicineListFragment"
+            app:destination="@id/medicineListFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
+        <action
+            android:id="@+id/action_home_to_cart"
+            app:destination="@id/fragmentcart"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
+        <action
+            android:id="@+id/action_home_to_detailFragment"
+            app:destination="@id/fragmentdetail"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+
+        <argument
+            android:name="productType"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/vitaminListFragment"
+        android:name="com.example.pharmalink.fragments.VitaminListFragment"
+        android:label="Vitamin List"
+        tools:layout="@layout/fragment_vitamin_list">
+        <action
+            android:id="@+id/action_vit_to_detail"
+            app:destination="@id/fragmentdetail"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
+    </fragment>
 
     <fragment
-        android:id="@+id/profile"
-        android:name="com.example.pharmalink.Profile"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile">
+        android:id="@+id/medicineListFragment"
+        android:name="com.example.pharmalink.fragments.MedicineListFragment"
+        android:label="Medicine List"
+        tools:layout="@layout/fragment_medicine_list" >
         <action
-            android:id="@+id/action_profile_to_login"
-            app:destination="@id/login"/>
+            android:id="@+id/action_med_to_detail"
+            app:destination="@id/fragmentdetail"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"/>
     </fragment>
+
+    <fragment
+        android:id="@+id/fragmentcart"
+        android:name="com.example.pharmalink.ui.cart.CartFragment"
+        android:label="Vitamin List"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/fragmentdetail"
+        android:name="com.example.pharmalink.fragments.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+        <argument
+            android:name="productType"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
+    android:id="@+id/profile"
+    android:name="com.example.pharmalink.fragments.Profile"
+    android:label="fragment_profile"
+    tools:layout="@layout/fragment_profile">
+    <action
+        android:id="@+id/action_profile_to_login"
+        app:destination="@id/login"/>
+</fragment>
 </navigation>

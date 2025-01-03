@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Item Image -->
+        <ImageView
+            android:id="@+id/cartItemImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/omega3" />
+
+        <!-- Text Container -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Item Name -->
+            <TextView
+                android:id="@+id/cartItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OBH Combi"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Item Size -->
+            <TextView
+                android:id="@+id/itemSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Item Price -->
+                <TextView
+                    android:id="@+id/cartItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$9.99"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!-- Quantity Selector -->
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- Decrement Button -->
+                    <ImageView
+                        android:id="@+id/incrementButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Decrement"
+                        android:src="@drawable/plus" />
+
+                    <!-- Quantity -->
+                    <TextView
+                        android:id="@+id/quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <!-- Increment Button -->
+                    <ImageView
+                        android:id="@+id/decrementButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Increment"
+                        android:src="@drawable/minus" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/deleteitem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@drawable/delete" />
+
+
+    </LinearLayout>
+</layout>

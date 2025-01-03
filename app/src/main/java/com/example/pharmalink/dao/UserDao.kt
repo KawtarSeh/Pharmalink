@@ -1,8 +1,9 @@
-package com.example.pharmalink
+package com.example.pharmalink.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.pharmalink.models.User
 
 @Dao
 interface UserDao {

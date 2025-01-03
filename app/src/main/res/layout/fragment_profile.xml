@@ -1,3 +1,4 @@
+<layout>
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -5,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
-    tools:context=".Profile">
+    tools:context=".fragments.Profile">
 
     <!-- Contenu principal -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,12 +78,5 @@
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Menu Drawer -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@android:color/white"
-        app:menu="@menu/drawer_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

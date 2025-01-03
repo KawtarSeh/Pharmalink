@@ -44,6 +44,7 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.navigation.ui.ktx)
     //Room Database
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
@@ -63,4 +64,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
 }

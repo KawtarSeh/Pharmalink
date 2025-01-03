@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFFFFF">
     <item
         android:id="@+id/home"
         android:icon="@drawable/home"
-        android:title="Accueil" />
-    <item
-        android:id="@+id/Details"
-        android:icon="@drawable/mail"
-        android:title="Details" />
+        android:title="@string/accueil" />
     <item
         android:id="@+id/panier"
         android:icon="@drawable/lock"
-        android:title="Panier" />
+        android:title="@string/panier" />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/user"
-        android:title="Profile" />
+        android:title="@string/profile" />
+
 </menu>

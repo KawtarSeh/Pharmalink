@@ -1,4 +1,4 @@
-package com.example.pharmalink
+package com.example.pharmalink.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.pharmalink.AppDatabase
+import com.example.pharmalink.R
 import com.example.pharmalink.databinding.FragmentRegistreBinding
+import com.example.pharmalink.models.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

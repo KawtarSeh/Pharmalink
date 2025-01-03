@@ -1,4 +1,4 @@
-package com.example.pharmalink
+package com.example.pharmalink.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.pharmalink.AppDatabase
+import com.example.pharmalink.R
+import com.example.pharmalink.SessionManager
 import com.example.pharmalink.databinding.FragmentLoginBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -50,14 +53,16 @@ class login : Fragment() {
                 // Retournez sur le thread principal pour mettre à jour l'UI
                 withContext(Dispatchers.Main) {
                     if (user != null) {
-                        val sharedPreferences = requireContext().getSharedPreferences("UserSession", Context.MODE_PRIVATE)
-                        sharedPreferences.edit().apply {
-                            putBoolean("isLoggedIn", true)
-                            putString("userEmail", user.email)
-                            putString("fullName", user.fullName)
-                            apply()
-                        }
-                        findNavController().navigate(R.id.action_login_to_profile)
+                        // Sauvegarde dans SessionManager
+                        SessionManager.saveSession(
+                            isLoggedIn = true,
+                            email = user.email,
+                            fullName = user.fullName,
+                            userId = user.id // Sauvegarde de l'ID utilisateur
+                        )
+
+                        Toast.makeText(requireContext(), "Connexion réussie", Toast.LENGTH_SHORT).show()
+                        findNavController().navigate(R.id.action_login_to_home)
                     } else {
                         Toast.makeText(requireContext(), "Email ou mot de passe incorrect", Toast.LENGTH_SHORT).show()
                     }

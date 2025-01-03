@@ -5,6 +5,13 @@
     <string name="Sign_up">S\'inscrire</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="accueil">Accueil</string>
+    <string name="details">Details</string>
+    <string name="panier">Panier</string>
+    <string name="profile">Profile</string>
+    <string name="product_not_found">Produit introuvable</string>
+    <string name="error_loading_product">Erreur lors du chargement des détails du produit</string>
+
 
 
 </resources>
